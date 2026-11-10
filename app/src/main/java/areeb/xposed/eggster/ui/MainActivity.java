@@ -131,20 +131,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.egg:
-                startActivity(new Intent(android.provider.Settings.ACTION_DEVICE_INFO_SETTINGS));
-                return true;
-            case R.id.licences:
-                showLicenses();
-                return true;
-            case R.id.about:
-                showAbout();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        // Handle item selection (if/else: R.id values aren't constants in AGP 8+, so no switch)
+        int id = item.getItemId();
+        if (id == R.id.egg) {
+            startActivity(new Intent(android.provider.Settings.ACTION_DEVICE_INFO_SETTINGS));
+            return true;
+        } else if (id == R.id.licences) {
+            showLicenses();
+            return true;
+        } else if (id == R.id.about) {
+            showAbout();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     private void showAbout() {
