@@ -16,15 +16,14 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.graphics.drawable.VectorDrawableCompat;
-import android.support.v4.content.ContextCompat;
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
+import androidx.core.content.ContextCompat;
 import android.util.DisplayMetrics;
 import android.view.*;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import areeb.xposed.eggster.R;
 import areeb.xposed.eggster.utils.PathInterpolator;
-import com.balysv.materialripple.MaterialRippleLayout;
 
 public class PlatLogoActivity extends Activity {
     final static int[] FLAVORS = {
@@ -261,14 +260,6 @@ public class PlatLogoActivity extends Activity {
 
         mLayout.addView(im, new FrameLayout.LayoutParams(size, size, Gravity.CENTER));
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            MaterialRippleLayout.on(im)
-                    .rippleOverlay(true)
-                    .rippleColor(0xFFFFFF)
-                    .rippleAlpha(0.2f)
-                    .rippleRoundedCorners(size / 3)
-                    .create();
-        }
 
         im.animate().scaleX(0.3f).scaleY(0.3f)
                 .setInterpolator(mInterpolator)

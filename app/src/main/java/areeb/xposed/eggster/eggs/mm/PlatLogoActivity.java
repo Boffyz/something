@@ -11,9 +11,9 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.RippleDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.graphics.drawable.VectorDrawableCompat;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.Nullable;
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
+import androidx.core.content.ContextCompat;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -23,7 +23,6 @@ import android.widget.FrameLayout;
 import areeb.xposed.eggster.R;
 import areeb.xposed.eggster.utils.Misc;
 import areeb.xposed.eggster.utils.PathInterpolator;
-import com.balysv.materialripple.MaterialRippleLayout;
 
 public class PlatLogoActivity extends Activity {
     FrameLayout mLayout;
@@ -177,14 +176,6 @@ public class PlatLogoActivity extends Activity {
 
         mLayout.addView(im, new FrameLayout.LayoutParams(size, size, Gravity.CENTER));
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            MaterialRippleLayout.on(im)
-                    .rippleOverlay(true)
-                    .rippleColor(0xFFFFFF)
-                    .rippleAlpha(0.2f)
-                    .rippleRoundedCorners(size)
-                    .create();
-        }
 
         im.animate().scaleX(1f).scaleY(1f).alpha(1f)
                 .setInterpolator(mInterpolator)

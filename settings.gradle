@@ -1,1 +1,18 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // Legacy Xposed API (de.robv.android.xposed:api:82) lives here now that jcenter is gone
+        maven { url 'https://api.xposed.info/' }
+    }
+}
+rootProject.name = 'eggster'
 include ':app'

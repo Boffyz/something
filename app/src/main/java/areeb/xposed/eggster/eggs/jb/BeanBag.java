@@ -34,7 +34,7 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import areeb.xposed.eggster.R;
-import com.nineoldandroids.animation.TimeAnimator;
+import android.animation.TimeAnimator;
 
 import java.util.Random;
 
