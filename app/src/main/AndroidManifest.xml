@@ -57,6 +57,19 @@
             </intent-filter>
         </activity>
 
+        <!-- Custom hidden egg (opened by tapping the icon in About 6 times) -->
+        <activity
+                android:name=".eggs.custom.CustomLogoActivity"
+                android:exported="false"
+                android:label="Custom egg"
+                android:theme="@style/Theme.Wallpaper"/>
+
+        <activity
+                android:name=".eggs.custom.CustomNyan"
+                android:exported="false"
+                android:label="Custom egg"
+                android:theme="@style/Theme.Wallpaper"/>
+
         <activity
                 android:name=".eggs.ics.PlatLogoActivity"
                 android:exported="true"
