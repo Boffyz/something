@@ -14,16 +14,12 @@ public class Contact {
 
     public static Contact[] getContacts() {
         Contact[] contacts = {
+                new Contact("https://github.com/Boffyz/something",
+                        "Source Code (this fork)", R.drawable.ic_git),          // Github (fork)
                 new Contact("https://github.com/iamareebjamal/eggster_xposed",
-                        "Source Code", R.drawable.ic_git),                      // Github
+                        "Original project", R.drawable.ic_git),                 // Github (upstream)
                 new Contact("http://forum.xda-developers.com/xposed/modules/xposed-eggster-1-2-replace-easter-eggs-t2758583",
-                        "XDA", R.drawable.ic_xda),                              // XDA
-                new Contact("https://plus.google.com/u/0/+areebjamaliam",
-                        "Google+", R.drawable.ic_gplus),                        // G+
-                new Contact("https://fb.me/iamareebjamal",
-                        "Facebook", R.drawable.ic_fb),                          // Facebook
-                new Contact("mailto:jamal.areeb@gmail.com",
-                        "Email", R.drawable.ic_gmail),                          // Gmail
+                        "XDA (original thread)", R.drawable.ic_xda),            // XDA
         };
 
         return contacts;
