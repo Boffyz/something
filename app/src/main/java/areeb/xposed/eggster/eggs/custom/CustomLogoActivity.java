@@ -60,7 +60,7 @@ public class CustomLogoActivity extends Activity {
 
         mZzz = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
 
-        mToast = Toast.makeText(this, "🐸", Toast.LENGTH_SHORT);
+        mToast = Toast.makeText(this, "test", Toast.LENGTH_SHORT);
 
         mContent = new ImageView(this);
         mContent.setImageResource(R.drawable.custom_logo);
