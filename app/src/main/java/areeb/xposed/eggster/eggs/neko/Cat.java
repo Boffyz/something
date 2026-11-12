@@ -426,6 +426,12 @@ public class Cat extends Drawable {
         // usage metrics are a system-only API; intentionally a no-op in this port
     }
 
+    public String getShortcutId() {
+        return ALL_CATS_IN_ONE_CONVERSATION
+                ? GLOBAL_SHORTCUT_ID
+                : (SHORTCUT_ID_PREFIX + mSeed);
+    }
+
     public static class CatParts {
         public Drawable leftEar;
         public Drawable rightEar;
