@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="neko_empty_hint">No cats yet.\n\nAdd the Neko tile to Quick Settings, tap it to put out some food, and a cat may visit you.\n\nOr adopt one right now:</string>
+    <string name="neko_adopt_cat">Adopt a random cat</string>
+</resources>

@@ -96,7 +96,14 @@ public class NekoLand extends Activity implements PrefsListener {
         mAdapter = new CatAdapter();
         recyclerView.setAdapter(mAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 3));
-        int numCats = updateCats();
+        findViewById(R.id.adoptButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPrefs.addCat(Cat.create(NekoLand.this));
+                updateCats();
+            }
+        });
+        updateCats();
     }
 
     @Override
@@ -128,6 +135,10 @@ public class NekoLand extends Activity implements PrefsListener {
             cats = list.toArray(new Cat[0]);
         }
         mAdapter.setCats(cats);
+        final View emptyView = findViewById(R.id.emptyView);
+        if (emptyView != null) {
+            emptyView.setVisibility(cats.length == 0 ? View.VISIBLE : View.GONE);
+        }
         return cats.length;
     }
 

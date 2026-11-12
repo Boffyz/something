@@ -22,4 +22,29 @@ Copyright (C) 2016 The Android Open Source Project
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
+
+    <!-- Shown while there are no cats yet (added in the Eggster port) -->
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/neko_empty_hint"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/adoptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/neko_adopt_cat"/>
+    </LinearLayout>
 </FrameLayout>
