@@ -13,7 +13,8 @@ public enum Egg {
     L_PREVIEW("L", "L"),
     LOLLIPOP("LP", "Lollipop"),
     MARSHMALLOW("MM", "Marshmallow"),
-    N_PREVIEW("N", "N");
+    N_PREVIEW("N", "N"),
+    NEKO("NEKO", "Neko");
 
 
     public static int BUILD = Build.VERSION.SDK_INT;

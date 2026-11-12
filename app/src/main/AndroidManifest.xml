@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <application
             android:allowBackup="true"
@@ -206,6 +207,60 @@
                 android:authorities="areeb.xposed.eggster"
                 android:name=".preferences.XPreferenceProvider"
                 android:exported="true"/>
+        <!-- Neko (Nougat cat collector), ported from AOSP -->
+        <activity
+                android:name=".eggs.neko.PlatLogoActivity"
+                android:exported="true"
+                android:label="Neko"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.NoDisplay"/>
+
+        <activity
+                android:name=".eggs.neko.NekoLand"
+                android:exported="true"
+                android:label="Neko"
+                android:theme="@android:style/Theme.Material.NoActionBar">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".eggs.neko.NekoLockedActivity"
+                android:excludeFromRecents="true"
+                android:exported="false"
+                android:showWhenLocked="true"
+                android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar"/>
+
+        <service
+                android:name=".eggs.neko.NekoService"
+                android:enabled="true"
+                android:exported="true"
+                android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <service
+                android:name=".eggs.neko.NekoTile"
+                android:enabled="true"
+                android:exported="true"
+                android:icon="@drawable/stat_icon"
+                android:label="@string/default_tile_name"
+                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
+        </service>
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="areeb.xposed.eggster.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/neko_filepaths"/>
+        </provider>
+
     </application>
 
 </manifest>
