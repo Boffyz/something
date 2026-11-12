@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Recommended scope shown by LSPosed/Vector: the framework (hosts PlatLogoActivity) and Eggster itself (for the "module active" check) -->
+    <!-- Recommended scope shown by LSPosed/Vector: the framework, the Android Easter Egg app (com.android.egg) and Eggster itself (for the "module active" check) -->
     <string-array name="xposed_scope">
         <item>android</item>
+        <item>com.android.egg</item>
         <item>areeb.xposed.eggster</item>
     </string-array>
 </resources>

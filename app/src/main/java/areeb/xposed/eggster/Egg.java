@@ -51,7 +51,7 @@ public enum Egg {
         else if (build_no == 24)
             return N_PREVIEW;
         else
-            return GINGERBREAD;
+            return null; // no matching egg bundled yet: leave the system's own egg alone
     }
 
     public static Egg getSystemEgg() {

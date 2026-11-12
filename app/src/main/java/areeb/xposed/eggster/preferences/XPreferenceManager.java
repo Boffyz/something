@@ -23,6 +23,7 @@ public class XPreferenceManager {
     }
 
     public String getEasterEgg() {
-        return preferences.getString(PreferenceManager.EGG_NAME, Egg.getSystemEgg().getId());
+        Egg systemEgg = Egg.getSystemEgg();
+        return preferences.getString(PreferenceManager.EGG_NAME, systemEgg == null ? null : systemEgg.getId());
     }
 }
