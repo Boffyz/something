@@ -5,10 +5,11 @@
      1. Enable system framework, android easter egg and android system in Xposed/lsposed(vector)\n
      2. Reboot your device\n
      3. Open the app and choose any Easter Egg\n
+     4. enjoy :)\n
      
      \nRewritten with love from scratch. Use gently.
     Be vary of bugs. Report nicely.\n
     \nOriginal app by iamareebjamal
     \nFork by Boffyz (AI-assisted, use gently)
-    \nIcon by DDRipper\n\nTested by:\n no one since im the only one who tests and compiles it :)</string>
+    \noriginal Icon by DDRipper\n\nTested by:\n no one (if you're talking about this fork) since im the only one who tests and "compiles" it :)</string>
 </resources>
