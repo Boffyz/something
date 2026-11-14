@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="100dp"
+        android:height="100dp"
+        android:viewportWidth="100"
+        android:viewportHeight="100">
+
+    <!-- deep-sea circle -->
+    <path
+            android:fillColor="#205090"
+            android:pathData="M50,5 C74.85,5 95,25.15 95,50 C95,74.85 74.85,95 50,95 C25.15,95 5,74.85 5,50 C5,25.15 25.15,5 50,5 Z"/>
+    <!-- tentacles -->
+    <path android:strokeColor="#E8EEF7" android:strokeWidth="5" android:strokeLineCap="round"
+          android:pathData="M33,55 C28,68 38,76 30,86"/>
+    <path android:strokeColor="#E8EEF7" android:strokeWidth="5" android:strokeLineCap="round"
+          android:pathData="M43,58 C40,70 48,78 43,88"/>
+    <path android:strokeColor="#E8EEF7" android:strokeWidth="5" android:strokeLineCap="round"
+          android:pathData="M57,58 C60,70 52,78 57,88"/>
+    <path android:strokeColor="#E8EEF7" android:strokeWidth="5" android:strokeLineCap="round"
+          android:pathData="M67,55 C72,68 62,76 70,86"/>
+    <!-- head -->
+    <path
+            android:fillColor="#E8EEF7"
+            android:pathData="M50,16 C66,16 76,28 76,42 C76,56 64,62 50,62 C36,62 24,56 24,42 C24,28 34,16 50,16 Z"/>
+    <!-- eyes -->
+    <path android:fillColor="#0B1F40"
+          android:pathData="M39,40 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+    <path android:fillColor="#0B1F40"
+          android:pathData="M61,40 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+</vector>

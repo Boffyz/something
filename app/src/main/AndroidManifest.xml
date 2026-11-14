@@ -207,6 +207,20 @@
                 android:authorities="areeb.xposed.eggster"
                 android:name=".preferences.XPreferenceProvider"
                 android:exported="true"/>
+        <!-- Oreo octopus aquarium, ported from AOSP -->
+        <activity
+                android:name=".eggs.oreo.PlatLogoActivity"
+                android:exported="true"
+                android:label="Oreo"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.NoDisplay"/>
+
+        <activity
+                android:name=".eggs.oreo.Ocquarium"
+                android:exported="false"
+                android:label="Oreo"
+                android:theme="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen"/>
+
         <!-- Neko (Nougat cat collector), ported from AOSP -->
         <activity
                 android:name=".eggs.neko.PlatLogoActivity"
