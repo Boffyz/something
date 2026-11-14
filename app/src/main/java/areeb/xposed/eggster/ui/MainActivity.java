@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ListView eggList;
     private int ayy; // lmao
+    private int iconTaps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showAbout() {
         ayy = 0;
+        iconTaps = 0;
         final View root = getLayoutInflater().inflate(R.layout.about, null);
         // App Name
         ((TextView) root.findViewById(R.id.appName)).setText(getString(R.string.app_name) + " " + BuildConfig.VERSION_NAME);
@@ -162,6 +164,19 @@ public class MainActivity extends AppCompatActivity {
                     tv.setText(tv.getText() + "\n\nEnough of that now dude");
                 ayy++;
                 ((ScrollView) root.findViewById(R.id.scroll)).fullScroll(View.FOCUS_DOWN);
+            }
+        });
+
+        // Hidden: tap the picture 6 times to open the custom egg
+        root.findViewById(R.id.imageView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iconTaps++;
+                if (iconTaps >= 6) {
+                    iconTaps = 0;
+                    startActivity(new Intent(MainActivity.this,
+                            areeb.xposed.eggster.eggs.custom.CustomLogoActivity.class));
+                }
             }
         });
 
